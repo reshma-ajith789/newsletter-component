@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'RobotoFont';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'RobotoFont';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+:root {
+    /* Colors */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-grey: #949494;
+    --color-red: #FF6155;
+    --color-red-100: #FFE7E6;
+    --color-blue-700: #36384D;
+    --color-blue-800: #242742;
+
+    /* Font families */
+    --font-family-roboto: 'RobotoFont', sans-serif;
+
+    /* Font sizes */
+    --font-size-text-preset-1: 56px;
+    --font-size-text-preset-1-mobile: 40px;
+    --font-size-text-preset-2: 16px;
+    --font-size-text-preset-3: 12px;
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-900: 72px;
+    --spacing-1300: 104px;
+}
+
+body {
+    font-family: var(--font-family-roboto);
+    font-weight: var(--font-weight-regular);
+    font-style: normal;
+    background-color: var(--color-blue-700);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#signup-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-400);
+    display: flex;
+    gap: var(--spacing-800);
+    border-radius: 36px;
+    box-shadow: 0px 15px 60px 0px rgba(0,0,0,0.25);
+    border: 1px solid #151515;
+    max-width: 910px;
+    max-height: 655px;
+}
+
+h1#signup-card-title {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-1);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+p.signup-card-subtitle {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+ul.signup-card-updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    list-style: none;
+}
+
+ul.signup-card-updates-list li::before {
+    content: "";
+    background-image: url('assets/images/icon-list.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+}
+
+ul.signup-card-updates-list > li {
+    display: flex;
+    /* align-items: center; */
+    gap: var(--spacing-200);
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+.email-address-field-container > input {
+    display: block;
+}
+
+.email-label-and-error-container > label {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-3);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+#signup-form input {
+    font-family: var(--font-family-roboto);
+    border-radius: 8px;
+    border: 1px solid var(--color-grey);
+    padding: var(--spacing-200) var(--spacing-300);
+    color: var(--color-grey);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+#signup-form input:focus {
+    outline: none;
+}
+
+#subscribe-button {
+    cursor: pointer;
+    font-family: var(--font-family-roboto);
+    background-color: var(--color-blue-800);
+    border-radius: 8px;
+    padding: var(--spacing-200) var(--spacing-900);
+    color: var(--color-white);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1.5;
+    border: none;
+}
+
+.signup-form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-400);
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.checkmark-icon {
+    width: 64px;
+    height: 64px;
+}
+
+#subscription-success-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-800);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    border-radius: 36px;
+    box-shadow: 0px 15px 60px 0px rgba(0,0,0,0.25);
+    border: 1px solid #151515;
+    max-width: 504px;
+    max-height: 520px;
+}
+
+h2.subscription-success-card-title {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-1);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+p.subscription-success-card-subtitle {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+p.subscription-success-card-subtitle > span#email-address {
+    color: var(--color-blue-800);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1.5;
+}
+
+#dismiss-message-button {
+    cursor: pointer;
+    font-family: var(--font-family-roboto);
+    background-color: var(--color-blue-800);
+    border-radius: 8px;
+    text-align: center;
+    padding: var(--spacing-200) 0px;
+    color: var(--color-white);
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1.5;
+    border: none;
+}
+
+#email-error {
+    color: var(--color-red);
+    font-size: var(--font-size-text-preset-3);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0px;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.email-label-and-error-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-address-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100)
+}
+
+.invalid-input {
+    background-color: var(--color-red-100) !important;
+    color: var(--color-red) !important;
+    border: 1px solid var(--color-red) !important;
+}
+
+.active-button {
+    background: linear-gradient(90deg, #FF6A3A, #FF527B);
+}
+
+.signup-card-illustration {
+    width: 100%;
+    display: block;
+}
+
+.subscription-success-message-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+#dismiss-message-button:hover {
+    background: linear-gradient(90deg, #FF6A3A, #FF527B);
+}
+
+/* Tablet */
+@media (max-width: 1023px){
+    #signup-card {
+        flex-direction: column-reverse;
+        max-width: 608px;
+        max-height: 878px;
+        gap: var(--spacing-500);
+    }
+
+    .signup-form-section {
+        gap: var(--spacing-300);
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    #signup-card {
+        flex-direction: column-reverse;
+        gap: var(--spacing-500);
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        padding: 0 0 44px;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    h1#signup-card-title {
+        font-size: var(--font-size-text-preset-1-mobile);
+    }
+
+    .signup-form-section {
+        gap: var(--spacing-300);
+        padding: 0 24px;
+    }
+
+    ul.signup-card-updates-list {
+        margin-bottom: var(--spacing-200);
+    }
+
+    .signup-card-illustration-section {
+        height: 100%;
+    }
+
+    #subscribe-button {
+        padding: var(--spacing-200) var(--spacing-600);
+    }
+
+    #subscription-success-card {
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 150px 24px 70px;
+        justify-content: space-between;
+    }
+
+    h2.subscription-success-card-title {
+        font-size: var(--font-size-text-preset-1-mobile);
+    }
+}
+
+@media (max-width: 380px) {
+    #subscribe-button {
+        padding: var(--spacing-200);
+    }
+}
+
